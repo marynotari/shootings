@@ -1,0 +1,92 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+  /* This centers our sketch horizontally. */
+  justify-content: center;
+
+  /* This centers our sketch vertically. */
+  align-items: center;
+}
+
+#startButton {
+    background-color: #C7C7C7;
+    border: none;
+    border-radius: 12px;
+    color: #000000;
+    opacity: 0.7;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    /* margin: 4px 2px; */
+    cursor: pointer;
+
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.01s;
+}
+
+#startButton:hover {
+  opacity: 1;
+}
+
+#stopButton {
+  /* background-color: transparent; */
+  background-color: #7C7C7C;
+  border: none;
+  border-radius: 6px;
+  color: #000000;
+  opacity: 0.;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 2;
+
+  -webkit-animation: fadein 60s; /* Safari 4.0 - 8.0 */
+  animation: fadein 60s;
+  /* animation-delay: 100s; */
+  animation-timing-function: ease-in;
+  /* animation-iteration-count: infinite; */
+  animation-fill-mode:forwards;
+}
+
+#stopButton:hover {
+  background-color: #AEAEAE;
+}
+
+#hiddenText {
+  position: absolute;
+  color: #e2e2e2;
+  font-family: Helvetica;
+  opacity: 0;
+  text-shadow: 1px 1px black;
+}
+
+#showingText {
+  position: absolute;
+  color: #e2e2e2;
+  font-family: Helvetica;
+  opacity: 1;
+  text-shadow: 1px 1px gray;
+}
+
+/* button fades after 2 loops */
+@-webkit-keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
